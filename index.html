@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Service Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- COLOR PALETTE CONTROL --- */
+        :root {
+            /* Change these codes to change the whole theme */
+            --primary-color: #6c5ce7;   /* Main button & Highlight (Purple) */
+            --secondary-color: #a29bfe; /* Lighter accent (Light Purple) */
+            --bg-color: #ffffff;        /* Background color */
+            --text-dark: #2d3436;       /* Main Heading text */
+            --text-light: #636e72;      /* Paragraph text */
+            --pill-bg: #f3f0ff;         /* User name background */
+        }
+
+        /* --- CSS Reset & Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bg-color);
+        }
+
+        /* --- Navbar Styling --- */
+        nav {
+            height: 10vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5vw;
+            background-color: var(--bg-color);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3vw;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: var(--primary-color);
+        }
+
+        .user-profile {
+            background-color: var(--pill-bg);
+            color: var(--primary-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .user-profile:hover {
+            border-color: var(--primary-color);
+        }
+
+        /* --- Hero Section Styling --- */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10vw;
+            gap: 2rem;
+        }
+
+        /* Left Div */
+        .hero-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .btn-book {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            width: fit-content;
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3); /* Purple shadow */
+            transition: transform 0.2s ease, background-color 0.3s;
+        }
+
+        .btn-book:hover {
+            transform: translateY(-2px);
+            background-color: #5849c4; /* Slightly darker purple on hover */
+        }
+
+        /* Right Div */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto;
+                height: auto;
+            }
+            .hero {
+                flex-direction: column-reverse;
+                height: auto;
+                padding: 2rem 5vw;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">LaundryMart</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="user-profile">Himanshu Sekhar Das</div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Revitalize Your <br> Clothes with Expert <br> <span>Laundry Services!</span></h1>
+            <p>From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and rediscover the freshness of your clothes today!</p>
+            <a href="#" class="btn-book">Book a service today!</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/laundry-machine-3d-icon-download-in-png-blend-fbx-gltf-file-formats--washing-electronic-clean-appliance-house-pack-furniture-icons-4998228.png" alt="3D Laundry Washing Machine">
+        </div>
+    </section>
+
+</body>
+</html>
